@@ -60,7 +60,7 @@ export function Projects() {
         {projects.map((project, index) => (
           <motion.div 
             key={index} 
-            className="group relative cursor-pointer"
+            className="group relative cursor-pointer border border-border/40 rounded-xl p-8 md:p-12 bg-card hover:border-accent/50 hover:bg-muted/5 transition-all duration-300 shadow-sm hover:shadow-xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}

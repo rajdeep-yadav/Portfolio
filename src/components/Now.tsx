@@ -22,35 +22,45 @@ export function Now() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col gap-8 text-sm md:text-base font-light"
+            className="flex flex-col text-sm md:text-base font-light border border-border/40 rounded-xl overflow-hidden bg-card shadow-sm"
           >
-            <div className="flex flex-col md:flex-row gap-2 md:gap-8">
-              <span className="w-40 shrink-0 font-mono text-muted uppercase text-xs tracking-widest pt-1">Currently learning</span>
-              <span className="text-foreground/90">{now.learning.join(" · ")}</span>
+            <div className="flex flex-col md:flex-row border-b border-border/40 hover:bg-muted/5 transition-colors">
+              <div className="w-full md:w-1/3 p-6 md:border-r border-border/40 bg-muted/5">
+                <span className="font-mono text-muted uppercase text-xs tracking-widest">Currently learning</span>
+              </div>
+              <div className="w-full md:w-2/3 p-6">
+                <span className="text-foreground/90 font-medium">{now.learning.join(" · ")}</span>
+              </div>
             </div>
             
-            <div className="h-[1px] w-full bg-border/30"></div>
-            
-            <div className="flex flex-col md:flex-row gap-2 md:gap-8">
-              <span className="w-40 shrink-0 font-mono text-muted uppercase text-xs tracking-widest pt-1">Currently building</span>
-              <span className="text-foreground/90">{now.building.join(" · ")}</span>
+            <div className="flex flex-col md:flex-row border-b border-border/40 hover:bg-muted/5 transition-colors">
+              <div className="w-full md:w-1/3 p-6 md:border-r border-border/40 bg-muted/5">
+                <span className="font-mono text-muted uppercase text-xs tracking-widest">Currently building</span>
+              </div>
+              <div className="w-full md:w-2/3 p-6">
+                <span className="text-foreground/90 font-medium">{now.building.join(" · ")}</span>
+              </div>
             </div>
             
-            <div className="h-[1px] w-full bg-border/30"></div>
-            
-            <div className="flex flex-col md:flex-row gap-2 md:gap-8">
-              <span className="w-40 shrink-0 font-mono text-muted uppercase text-xs tracking-widest pt-1">Currently exploring</span>
-              <span className="text-foreground/90">{now.exploring.join(" · ")}</span>
+            <div className="flex flex-col md:flex-row border-b border-border/40 hover:bg-muted/5 transition-colors">
+              <div className="w-full md:w-1/3 p-6 md:border-r border-border/40 bg-muted/5">
+                <span className="font-mono text-muted uppercase text-xs tracking-widest">Currently exploring</span>
+              </div>
+              <div className="w-full md:w-2/3 p-6">
+                <span className="text-foreground/90 font-medium">{now.exploring.join(" · ")}</span>
+              </div>
             </div>
             
-            <div className="h-[1px] w-full bg-border/30"></div>
-            
-            <div className="flex flex-col md:flex-row gap-2 md:gap-8">
-              <span className="w-40 shrink-0 font-mono text-muted uppercase text-xs tracking-widest pt-1">Open to</span>
-              <span className="text-foreground/90 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shadow-[0_0_8px_var(--accent)]" />
-                {now.status}
-              </span>
+            <div className="flex flex-col md:flex-row hover:bg-muted/5 transition-colors">
+              <div className="w-full md:w-1/3 p-6 md:border-r border-border/40 bg-muted/5">
+                <span className="font-mono text-muted uppercase text-xs tracking-widest">Open to</span>
+              </div>
+              <div className="w-full md:w-2/3 p-6 flex items-center">
+                <span className="text-foreground/90 font-medium flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse shadow-[0_0_8px_var(--accent)]" />
+                  {now.status}
+                </span>
+              </div>
             </div>
           </motion.div>
         </div>

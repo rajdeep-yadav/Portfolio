@@ -63,10 +63,10 @@ export function Learning() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="group"
+                  className="group border border-border/40 rounded-xl p-6 bg-card hover:border-accent/50 hover:bg-muted/5 transition-all duration-300 shadow-sm"
                 >
-                  <div className="text-xs font-mono text-muted mb-1 group-hover:text-accent transition-colors">{achievement.year}</div>
-                  <h4 className="text-foreground font-medium mb-1 tracking-tight">{achievement.title}</h4>
+                  <div className="text-xs font-mono text-muted mb-2 group-hover:text-accent transition-colors">{achievement.year}</div>
+                  <h4 className="text-foreground font-medium mb-3 tracking-tight">{achievement.title}</h4>
                   <p className="text-sm text-foreground/60 font-light leading-relaxed">{achievement.description}</p>
                 </motion.li>
               ))}
